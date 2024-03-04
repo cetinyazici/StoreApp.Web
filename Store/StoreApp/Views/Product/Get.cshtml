@@ -1,13 +1,21 @@
-﻿@model StoreApp.Models.Product
-@{
-    ViewData["Title"] = "Get";
-}
+﻿@model Product
 
-<h1>Get View Sayfası</h1>
-
-<h3>@Model.ProductName</h3>
-<h3>@Model.Price</h3>
-<p>
-    <a href="/Product">Products</a>
-</p>
-
+<div class="col-md-4 my-3">
+    <div class="card" style="width: 18rem;">
+        <img src="~/images/default.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h2 class="card-title">@Model.ProductName</h2>
+            <h4 class="card-text">Ürün Fiyatı=>  @Model.Price</h4>
+            <div class="btn-group">
+                <a class="btn btn-primary" asp-controller="Home" asp-action="Index">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </a>
+                <a class="btn btn-outline-primary" asp-controller="Product" asp-action="Index">
+                    <i class="fa-solid fa-list"></i>
+                    Products
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

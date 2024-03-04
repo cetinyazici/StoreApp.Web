@@ -1,0 +1,17 @@
+﻿@model Product;
+
+<div class="col-md-4 my-3">
+    <div class="card" style="width: 18rem;">
+        <img src="~/images/default.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@Model.ProductName</h5>
+            <p class="card-text">Ürün Fiyatı=>  @Model.Price</p>
+            <a class="btn btn-primary" asp-action="Get" asp-route-id="@Model.ProductId">
+                <i class="fa-solid fa-arrow-right"></i>
+                Get Details
+            </a>
+        </div>
+    </div>
+</div>
+
+

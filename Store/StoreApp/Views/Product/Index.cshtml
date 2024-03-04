@@ -1,16 +1,8 @@
-﻿@model List<StoreApp.Models.Product>
-@{
-    ViewData["Title"] = "Index";
-}
+﻿@model List<Product>
 
-@foreach(StoreApp.Models.Product product in Model)
-{
-    <div>
-        <h2>@product.ProductName</h2>
-        <p>@product.Price</p>
-        <p>
-            <a href="/Product/Get/@product.ProductId">Get Details</a>
-        </p>
-        <hr />
-    </div>
-}
+<div class="row my-3">
+    @foreach (Product product in Model)
+    {
+        <partial name="ProductCard" model="product"></partial>
+    }
+</div>
