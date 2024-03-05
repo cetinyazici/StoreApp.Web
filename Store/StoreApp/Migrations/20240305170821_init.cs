@@ -50,30 +50,8 @@ namespace StoreApp.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DeleteData(
-                table: "Products",
-                keyColumn: "ProductId",
-                keyValue: 1);
-
-            migrationBuilder.DeleteData(
-                table: "Products",
-                keyColumn: "ProductId",
-                keyValue: 2);
-
-            migrationBuilder.DeleteData(
-                table: "Products",
-                keyColumn: "ProductId",
-                keyValue: 3);
-
-            migrationBuilder.DeleteData(
-                table: "Products",
-                keyColumn: "ProductId",
-                keyValue: 4);
-
-            migrationBuilder.DeleteData(
-                table: "Products",
-                keyColumn: "ProductId",
-                keyValue: 5);
+            migrationBuilder.DropTable(
+                name: "Products");
         }
     }
 }
