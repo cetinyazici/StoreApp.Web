@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Category>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="text-center my-3">
+    <h2 class="dislay6">
+        Categoies
+    </h2>
+</div>
+
+<ul class="list-group my-3">
+    @foreach (var category in Model)
+    {
+        <li class="list-group-item">@category.CategoryName</li>
+    }
+</ul>
+
