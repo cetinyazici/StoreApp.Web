@@ -5,7 +5,7 @@
     </h2>
 </div>
 <div class="row my-3">
-    @foreach (Product product in Model)
+    @foreach (var product in Model)
     {
         <partial name="ProductCard" model="product"></partial>
     }
