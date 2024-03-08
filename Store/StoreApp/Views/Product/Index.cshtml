@@ -1,12 +1,23 @@
 ﻿@model IQueryable<Product>
-<div class="text-center my-3">
-    <h2 class="dislay6">
-        Products
-    </h2>
+
+<div class="row">
+    <div class="col-md-3 my-3">
+        <div class="text-center my-3">
+            @await Component.InvokeAsync("CategoriesMenu")
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="text-center my-3">
+            <h2 class="dislay6">
+                Products
+            </h2>
+        </div>
+        <div class="row my-3">
+            @foreach (var product in Model)
+            {
+                <partial name="ProductCard" model="product"></partial>
+            }
+        </div>
+    </div>
 </div>
-<div class="row my-3">
-    @foreach (var product in Model)
-    {
-        <partial name="ProductCard" model="product"></partial>
-    }
-</div>
+

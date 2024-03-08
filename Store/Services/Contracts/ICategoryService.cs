@@ -9,6 +9,6 @@ namespace Services.Contracts
 {
     public interface ICategoryService
     {
-        IEnumerable<Category> GetAllProducts(bool trackChanges);
+        IEnumerable<Category> GetAllCategoies(bool trackChanges);
     }
 }
