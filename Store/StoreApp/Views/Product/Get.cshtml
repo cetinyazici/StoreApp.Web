@@ -1,21 +1,22 @@
 ﻿@model Product
 
-<div class="col-md-4 my-3">
-    <div class="card" style="width: 18rem;">
-        <img src="~/images/default.png" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h2 class="card-title">@Model.ProductName</h2>
-            <h4 class="card-text">Ürün Fiyatı=>  @Model.Price</h4>
-            <div class="btn-group">
-                <a class="btn btn-primary" asp-controller="Home" asp-action="Index">
-                    <i class="fa-solid fa-house"></i>
-                    Home
-                </a>
-                <a class="btn btn-outline-primary" asp-controller="Product" asp-action="Index">
-                    <i class="fa-solid fa-list"></i>
-                    Products
-                </a>
-            </div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="text-center">
+            <h2 class="card-title mt-5">@Model.ProductName</h2>
+            <img width="350" class="img-fluid rounded-3 shadow my-3" src="@Model?.ImageUrl" alt="@Model.ProductName" />
+            <p class="lead text-danger">Ürün Fiyatı: @Model.Price.ToString("c")</p>
+            <p>@Model.Summary</p>
+        </div>
+        <div class="btn-group">
+            <a class="btn btn-primary" asp-controller="Home" asp-action="Index">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+            <a class="btn btn-outline-primary" asp-controller="Product" asp-action="Index">
+                <i class="fa-solid fa-list"></i>
+                Products
+            </a>
         </div>
     </div>
 </div>
