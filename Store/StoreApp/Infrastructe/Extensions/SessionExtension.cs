@@ -12,7 +12,7 @@ namespace StoreApp.Infrastructe.Extensions
             session.SetString(key,JsonSerializer.Serialize(value));
         }
 
-        public static void SetObject<T>(this ISession session, string key, T value)
+        public static void SetJson<T>(this ISession session, string key, T value)
         {
             session.SetString(key,JsonSerializer.Serialize(value));
         }
@@ -20,7 +20,7 @@ namespace StoreApp.Infrastructe.Extensions
         public static T? GetJson<T>(this ISession session, string key)
         {
             var data = session.GetString(key);
-            return session is null
+            return data is null
                 ? default(T)
                 : JsonSerializer.Deserialize<T>(data);
         }
