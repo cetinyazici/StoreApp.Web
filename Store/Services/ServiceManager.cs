@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Services
 {
-    public class ServiceManager : IServiceManager
+    public class ServiceManager : Cart
     {
         private readonly IProductService _productService;
         private readonly ICategoryService _categoryService;

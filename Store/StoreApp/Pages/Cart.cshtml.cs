@@ -8,13 +8,13 @@ namespace StoreApp.Pages
 {
     public class CartModel : PageModel
     {
-        private readonly IServiceManager _manager;
-        public Cart Cart { get; set; } //IoC
+        private readonly Services.Contracts.Cart _manager;
+        public Entities.Models.Cart Cart { get; set; } //IoC
         public string ReturnUrl { get; set; } = "/";
 
 
         //cartService sayesinde yorum satýrýna alýnan kýsýmlar yapýlmýþ oldu...
-        public CartModel(IServiceManager serviceManager, Cart cartService)
+        public CartModel(Services.Contracts.Cart serviceManager, Entities.Models.Cart cartService)
         {
             _manager = serviceManager;
             Cart = cartService;
@@ -32,7 +32,7 @@ namespace StoreApp.Pages
             if (product is not null)
             {
                 //Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
-                Cart.AddItem(product,1);
+                Cart.AddItem(product, 1);
                 //HttpContext.Session.SetJson<Cart>("cart",Cart);
             }
             return Page(); //returnUrl 

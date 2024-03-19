@@ -34,11 +34,11 @@ builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
-builder.Services.AddScoped<IServiceManager, ServiceManager>();
+builder.Services.AddScoped<Services.Contracts.Cart, ServiceManager>();
 builder.Services.AddScoped<IProductService, ProductManager>();
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
 
-builder.Services.AddScoped<Cart>(c=>SessionCart.GetCart(c));
+builder.Services.AddScoped(c => SessionCart.GetCart(c));
 
 builder.Services.AddAutoMapper(typeof(Program));
 
