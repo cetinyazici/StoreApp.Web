@@ -5,9 +5,9 @@ namespace StoreApp.Component
 {
     public class CategoriesMenuViewComponent : ViewComponent
     {
-        private readonly Cart _manager;
+        private readonly IServiceManager _manager;
 
-        public CategoriesMenuViewComponent(Cart manager)
+        public CategoriesMenuViewComponent(IServiceManager manager)
         {
             _manager = manager;
         }

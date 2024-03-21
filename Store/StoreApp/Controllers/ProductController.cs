@@ -10,9 +10,9 @@ namespace StoreApp.Controllers
 {
     public class ProductController : Controller
     {
-        private readonly Services.Contracts.Cart _manager;
+        private readonly Services.Contracts.IServiceManager _manager;
 
-        public ProductController(Services.Contracts.Cart manager)
+        public ProductController(Services.Contracts.IServiceManager manager)
         {
             _manager = manager;
         }

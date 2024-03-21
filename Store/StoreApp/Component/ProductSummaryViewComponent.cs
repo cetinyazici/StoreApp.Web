@@ -7,9 +7,9 @@ namespace StoreApp.Component
 {
     public class ProductSummaryViewComponent : ViewComponent
     {
-        private readonly Cart _services;
+        private readonly IServiceManager _services;
 
-        public ProductSummaryViewComponent(Cart services)
+        public ProductSummaryViewComponent(IServiceManager services)
         {
             _services = services;
         }

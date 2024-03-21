@@ -8,13 +8,13 @@ namespace StoreApp.Pages
 {
     public class CartModel : PageModel
     {
-        private readonly Services.Contracts.Cart _manager;
+        private readonly Services.Contracts.IServiceManager _manager;
         public Entities.Models.Cart Cart { get; set; } //IoC
         public string ReturnUrl { get; set; } = "/";
 
 
         //cartService sayesinde yorum satýrýna alýnan kýsýmlar yapýlmýþ oldu...
-        public CartModel(Services.Contracts.Cart serviceManager, Entities.Models.Cart cartService)
+        public CartModel(Services.Contracts.IServiceManager serviceManager, Entities.Models.Cart cartService)
         {
             _manager = serviceManager;
             Cart = cartService;

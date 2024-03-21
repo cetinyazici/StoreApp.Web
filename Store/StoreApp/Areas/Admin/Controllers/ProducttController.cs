@@ -10,9 +10,9 @@ namespace StoreApp.Areas.Admin.Controllers
     [Area("Admin")]
     public class ProducttController : Controller
     {
-        private readonly Services.Contracts.Cart _services;
+        private readonly Services.Contracts.IServiceManager _services;
 
-        public ProducttController(Services.Contracts.Cart services)
+        public ProducttController(Services.Contracts.IServiceManager services)
         {
             _services = services;
         }
