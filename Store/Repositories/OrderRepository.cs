@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Repositories
 {
-    public class OrdersRepository : RepositoryBase<Order>, IOrderRepository
+    public class OrderRepository : RepositoryBase<Order>, IOrderRepository
     {
-        public OrdersRepository(RepositoryContext context) : base(context)
+        public OrderRepository(RepositoryContext context) : base(context)
         {
         }
 
