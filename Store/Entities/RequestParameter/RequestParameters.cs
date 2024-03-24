@@ -8,5 +8,6 @@ namespace Entities.RequestParameter
 {
     public abstract class RequestParameters
     {
+        public String? SearchTerm { get; set; }
     }
 }

@@ -26,7 +26,10 @@ namespace Repositories
 
         public IQueryable<Product> GetAllProductsWithDetails(ProductRequestParameters p)
         {
-            return _context.Products.FilteredByCategoryId(p.CategoryId);
+            return _context
+                .Products
+                .FilteredByCategoryId(p.CategoryId)
+                .FilteredBySearchTerm(p.SearchTerm);
         }
 
         public Product? GetOneProduct(int id, bool trackChanges)
