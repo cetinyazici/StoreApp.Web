@@ -11,9 +11,9 @@ namespace StoreApp.Controllers
 {
     public class ProductController : Controller
     {
-        private readonly Services.Contracts.IServiceManager _manager;
+        private readonly IServiceManager _manager;
 
-        public ProductController(Services.Contracts.IServiceManager manager)
+        public ProductController(IServiceManager manager)
         {
             _manager = manager;
         }

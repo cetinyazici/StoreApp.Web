@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entities.RequestParameter
 {
-    public abstract class ProductRequestParameters : RequestParameters
+    public class ProductRequestParameters : RequestParameters
     {
         public int? CategoryId { get; set; }
     }
