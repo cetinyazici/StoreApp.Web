@@ -12,7 +12,11 @@
 <ul class="list-group my-3">
     @foreach (var category in Model)
     {
-        <li class="list-group-item">@category.CategoryName</li>
+        <li class="list-group-item">
+            <a asp-action="Index" asp-route-categoryId="@category.CategoryId">
+                @category.CategoryName
+            </a>
+        </li>
     }
 </ul>
 
