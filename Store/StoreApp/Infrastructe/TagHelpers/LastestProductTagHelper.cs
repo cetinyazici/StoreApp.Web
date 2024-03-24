@@ -1,4 +1,5 @@
-﻿using Entities.Models;
+﻿using AutoMapper.Execution;
+using Entities.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Razor.Runtime.TagHelpers;
 using Microsoft.AspNetCore.Razor.TagHelpers;
@@ -12,6 +13,8 @@ namespace StoreApp.Infrastructe.TagHelpers
     {
         private readonly IServiceManager _manager;
 
+        [HtmlAttributeName("number")]
+        public int Nuber { get; set; }
         public LastestProductTagHelper(IServiceManager manager)
         {
             _manager = manager;
@@ -32,7 +35,7 @@ namespace StoreApp.Infrastructe.TagHelpers
             h6.InnerHtml.AppendHtml("Lastest Products");
 
             TagBuilder ul = new TagBuilder("ul");
-            var products = _manager.ProductService.GetLastestProducts(5,false);
+            var products = _manager.ProductService.GetLastestProducts(Nuber, false);
             foreach (Product prd in products)
             {
                 TagBuilder li = new TagBuilder("li");
