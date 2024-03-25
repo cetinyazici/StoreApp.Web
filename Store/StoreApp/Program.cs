@@ -25,6 +25,7 @@ builder.Services.ConfigureServiceRegistration();
 builder.Services.ConfigureRouting();
 
 
+
 builder.Services.AddAutoMapper(typeof(Program));
 
 var app = builder.Build();
@@ -47,6 +48,7 @@ app.UseEndpoints(endpoinds =>
 
 app.ConfigureAndCheckMigration();
 app.ConfigureLocalization();
+app.ConfigureDefaultAdminUser();
 app.Run();
 
  
