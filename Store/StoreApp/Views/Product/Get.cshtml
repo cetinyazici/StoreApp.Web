@@ -4,24 +4,25 @@
     <div class="col-md-12">
         <div class="text-center">
             <h2 class="card-title mt-5">@Model.ProductName</h2>
-            <img width="350" class="img-fluid rounded-3 shadow my-3" src="@Model?.ImageUrl" alt="@Model.ProductName" />
+            <img width="350" class="img-fluid rounded-3 py-5 my-3" src="@Model?.ImageUrl" alt="@Model.ProductName" />
             <p class="lead text-danger">@Model.Price.ToString("c")</p>
             <p>@Model.Summary</p>
         </div>
         <div class="text-center">
             <div class="btn-group">
-                <a class="btn btn-outline-primary mx-1 rounded-2" asp-controller="Home" asp-action="Index">
+                <a class="btn btn-outline-secondary mx-1 rounded-2" asp-controller="Home" asp-action="Index">
                     <i class="fa-solid fa-house"></i>
                     Home
                 </a>
                 <form id="@Model.ProductId" method="post" asp-page="/cart">
                     <input type="hidden" asp-for="ProductId" />
                     <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
-                    <button type="submit" class="btn btn-outline-primary mx-1">
+                    <button type="submit" class="btn btn-outline-secondary mx-1">
                         <i class="fa fa-cart-plus"></i>
+                        Add To Cart
                     </button>
                 </form>
-                <a class="btn btn-outline-primary mx-1 rounded-2" asp-controller="Product" asp-action="Index">
+                <a class="btn btn-outline-secondary mx-1 rounded-2" asp-controller="Product" asp-action="Index">
                     <i class="fa-solid fa-list"></i>
                     Products
                 </a>
