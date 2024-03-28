@@ -35,6 +35,10 @@ app.UseStaticFiles();
 app.UseHttpsRedirection();
 app.UseRouting();
 
+app.UseAuthentication();
+app.UseAuthorization();
+
+
 app.UseEndpoints(endpoinds =>
 {
     endpoinds.MapAreaControllerRoute(
@@ -51,4 +55,3 @@ app.ConfigureLocalization();
 app.ConfigureDefaultAdminUser();
 app.Run();
 
- 
