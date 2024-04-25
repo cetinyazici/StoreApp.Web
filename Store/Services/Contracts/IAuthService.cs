@@ -12,9 +12,10 @@ namespace Services.Contracts
     {
         IEnumerable<IdentityRole> Roles { get; }
         Task<IdentityResult> CreateRole(string roleName);
-
-
         IEnumerable<IdentityUser> GetAllUsers();
         Task<IdentityResult> CreateUser(UserDtoForCreaiton userDto);
+        Task<IdentityUser> GetOneUser(string userName);
+        Task<UserDtoForUpdate> GetOneUserForUpdate(string userName);
+        Task Update(UserDtoForUpdate userDto);
     }
 }
