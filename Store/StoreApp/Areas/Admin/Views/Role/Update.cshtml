@@ -1,0 +1,24 @@
+﻿@model IdentityRole
+
+<div class="text-center">
+    <div class="display-6">Update Role</div>
+</div>
+
+<form asp-action="Update" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group my-3">
+        <label asp-for="Name">Role Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group my-3">
+        <div class="btn-group">
+            <button type="submit" class="btn btn-primary">
+                <i class="fa fa-save"></i> Update
+            </button>
+            <a class="btn btn-outline-danger" asp-action="Index">
+                <i class="fa fa-list"></i> Roles
+            </a>
+        </div>
+    </div>
+</form>
