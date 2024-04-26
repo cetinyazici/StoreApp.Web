@@ -11,7 +11,7 @@ using StoreApp.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 //API kullanýcaðýmýda belitmiþ oluyorum aslýnda 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddApplicationPart(typeof(Presentation.AssemblyReference).Assembly);
 
 //controller kullanýcam ve view nesnelerinden de istifade edicem demek.
 builder.Services.AddControllersWithViews();
