@@ -10,6 +10,9 @@ using StoreApp.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//API kullanýcaðýmýda belitmiþ oluyorum aslýnda 
+builder.Services.AddControllers();
+
 //controller kullanýcam ve view nesnelerinden de istifade edicem demek.
 builder.Services.AddControllersWithViews();
 
@@ -49,6 +52,7 @@ app.UseEndpoints(endpoinds =>
         );
     endpoinds.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
     endpoinds.MapRazorPages();
+    endpoinds.MapControllers();
 });
 
 app.ConfigureAndCheckMigration();
