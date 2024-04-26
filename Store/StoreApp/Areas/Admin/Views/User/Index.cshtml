@@ -9,7 +9,6 @@
             Create User
         </a>
     </div>
-
     <table class="table table-striped table-hover">
         <thead>
             <tr>
@@ -30,19 +29,16 @@
                     <td user-name="@user.UserName" user-role=""></td>
                     <td>
                         <div class="btn-group">
-                            <a class="btn btn btn-warning rounded-pill" asp-action="Update" asp-route-id="@user.UserName">
+                            <a data-toggle="tooltip" data-placement="top" title="Edit" class="btn btn-warning rounded-pill m-1" asp-action="Update" asp-route-id="@user.UserName">
                                 <i class="fa fa-solid fa-edit"></i>
-                                Edit
                             </a>
-                            <a class="btn btn btn-info rounded-pill" asp-action="ResetPassword" asp-route-id="@user.UserName">
+                            <a data-toggle="tooltip" data-placement="top" title="Reset Password" class="btn btn-info rounded-pill m-1" asp-action="ResetPassword" asp-route-id="@user.UserName">
                                 <i class="fa fa-solid fa-edit"></i>
-                                Reset Password
                             </a>
                             <form method="post" asp-action="DeleteOneUser">
                                 <input type="hidden" name="UserName" value="@user.UserName" />
-                                <button type="submit" class="btn btn-danger rounded-pill">
+                                <button data-toggle="tooltip" data-placement="top" title="Delete" type="submit" class="btn btn-danger rounded-pill m-1">
                                     <i class="fa fa-solid fa-trash"></i>
-                                    Delete
                                 </button>
                             </form>
                         </div>
@@ -52,3 +48,12 @@
         </tbody>
     </table>
 </div>
+
+@section Script
+{
+    <script type="text/javascript">
+        $(document).ready(() => {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+    </script>
+}
