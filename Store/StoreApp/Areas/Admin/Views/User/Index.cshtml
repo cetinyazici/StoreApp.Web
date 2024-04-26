@@ -6,7 +6,7 @@
     <div class="d-flex justify-content-end my-3">
         <a class="btn btn-outline-success" asp-action="Create">
             <i class="fa fa-plus"></i>
-            Create
+            Create User
         </a>
     </div>
 
@@ -30,17 +30,17 @@
                     <td user-name="@user.UserName" user-role=""></td>
                     <td>
                         <div class="btn-group">
-                            <a class="btn btn btn-warning rounded-0" asp-action="Update" asp-route-id="@user.UserName">
+                            <a class="btn btn btn-warning rounded-pill" asp-action="Update" asp-route-id="@user.UserName">
                                 <i class="fa fa-solid fa-edit"></i>
                                 Edit
                             </a>
-                            <a class="btn btn btn-info rounded-0" asp-action="ResetPassword" asp-route-id="@user.UserName">
+                            <a class="btn btn btn-info rounded-pill" asp-action="ResetPassword" asp-route-id="@user.UserName">
                                 <i class="fa fa-solid fa-edit"></i>
                                 Reset Password
                             </a>
                             <form method="post" asp-action="DeleteOneUser">
                                 <input type="hidden" name="UserName" value="@user.UserName" />
-                                <button type="submit" class="btn btn-danger rounded-0">
+                                <button type="submit" class="btn btn-danger rounded-pill">
                                     <i class="fa fa-solid fa-trash"></i>
                                     Delete
                                 </button>
