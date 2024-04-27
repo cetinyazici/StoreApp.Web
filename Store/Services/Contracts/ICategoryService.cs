@@ -1,4 +1,5 @@
-﻿using Entities.Models;
+﻿using Entities.Dtos;
+using Entities.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,7 @@ namespace Services.Contracts
     public interface ICategoryService
     {
         IEnumerable<Category> GetAllCategoies(bool trackChanges);
+        void CreateCategory(CategoryDtoForInsertion categoryDto);
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using Entities.Models;
+﻿using Entities.Dtos;
+using Entities.Models;
 using Repositories.Contracts;
 using Services.Contracts;
 using System;
@@ -16,6 +17,17 @@ namespace Services
         public CategoryManager(IRepositoryManager manager)
         {
             _manager = manager;
+        }
+
+        public void CreateCategory(CategoryDtoForInsertion categoryDto)
+        {
+            Category category = new Category()
+            {
+                CategoryId = categoryDto.CategoryId,
+                CategoryName = categoryDto.CategoryName,
+            };
+            _manager.Category.Create(category);
+            _manager.Save();
         }
 
         public IEnumerable<Category> GetAllCategoies(bool trackChanges)
