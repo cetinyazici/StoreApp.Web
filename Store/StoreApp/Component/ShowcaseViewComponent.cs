@@ -13,10 +13,12 @@ namespace StoreApp.Component
             _services = services;
         }
 
-        public IViewComponentResult Invoke()
+        public IViewComponentResult Invoke(string page = "default")
         {
             var product = _services.ProductService.GetShowcaseProducts(false);
-            return View(product);
+            return page.Equals("default")
+                ? View(product)
+                : View("list", product);
         }
     }
 }

@@ -31,7 +31,6 @@ namespace StoreApp.Controllers
             return View(new ProductListViewModel(){
                  Products = products,
                  Pagination = pagination
-
             });
         }
 
