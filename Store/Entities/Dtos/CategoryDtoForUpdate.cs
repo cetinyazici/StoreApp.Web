@@ -5,10 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repositories.Contracts
+namespace Entities.Dtos
 {
-    public interface ICategoryRepository : IRepositoryBase<Category>
+    public class CategoryDtoForUpdate : Category
     {
-
     }
 }
