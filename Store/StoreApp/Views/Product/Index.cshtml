@@ -5,7 +5,7 @@
         <div class="my-3">
             @await Component.InvokeAsync("CategoriesMenu")
             @await Component.InvokeAsync("ProductFilterMenu")
-            <div class="mt-5" products="" number="3"></div>
+            <div products="" number="3"></div>
         </div>
     </div>
     <div class="col-md-9">
@@ -19,15 +19,15 @@
             {
                 <partial name="ProductCard" model="@product"></partial>
             }
-        </div>
-        <div>
-            <div page-model="@Model?.Pagination"
-                 page-action="Index"
-                 page-classes-enabled="true"
-                 page-class="btn"
-                 page-class-normal="btn-outline-dark"
-                 page-class-selected="btn-primary"
-                 class="btn-group text-center">
+            <div class="text-center">
+                <div page-model="@Model?.Pagination"
+                     page-action="Index"
+                     page-classes-enabled="true"
+                     page-class="btn"
+                     page-class-normal="btn-outline-dark"
+                     page-class-selected="btn-primary"
+                     class="btn-group text-center">
+                </div>
             </div>
         </div>
     </div>
