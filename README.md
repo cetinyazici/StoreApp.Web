@@ -1,185 +1,109 @@
-# BTK Akademi ASP.NET Core MVC Eğitimi
+# BTkAkademi ve StoreApp Projeleri
 
-## MVC
+Bu repository, [ASP.NET Core MVC](https://github.com/cetinyazici/ASP.NET-Core-MVC) altında geliştirilen BTkAkademi ve StoreApp adında iki ayrı projeyi içermektedir. Her iki proje de C# dilinde yazılmış ve ASP.NET Core MVC framework kullanılarak oluşturulmuştur. Frontend'de Bootstrap kullanılarak responsif ve kullanıcı dostu arayüzler tasarlanmış, backend tarafında ise güçlü ve ölçeklenebilir .NET Core mimarisi kullanılmıştır.
 
-.NET Core MVC, Model-View-Controller (MVC) tasarım modelini kullanarak web uygulamaları oluşturmaya yönelik bir çerçevedir.
+## Projeler Hakkında
 
-MVC, bir uygulamayı üç ana bölüme ayıran bir yazılım mimari modelidir: model (model), görünüm (view) ve denetleyici (controller). Bu model, işlevsellik alanlarının tanımlandığı endişelerin ayrılmasını vurgular.
+### BTkAkademi
 
-Bu, web sayfalarının yol açtığı belirsiz mimarilere karşı etkili bir panzehirdir.
+BTkAkademi, öğrencilerin çeşitli kurslara başvuruda bulunabildikleri, kayıt işlemlerini gerçekleştirebildikleri ve kurs listelerini görüntüleyebildikleri, MVC (Model-View-Controller) mimarisi temellerini kullanarak geliştirilmiş küçük bir web uygulamasıdır.
 
-MVC temelde;
+#### Özellikler
 
-- Endişelerin ayrılmasına yardımcı olur (**_seperation of concerns_**)
-- Sorumlulukların ayrılmasına yardımcı olur.
-- Kodun sürdürülebilir olmasını sağlar.
-- Hata ayıklamayı kolaylaştırır.
-- Test edilebilirliği arttırır.
+- Kurs başvurusu için form doldurma ve kayıt işlemi
+- Kurs listeleme özelliği
+- MVC mimarisi kullanılarak yapılandırılmış temiz ve yönetilebilir kod yapısı
 
-## Eğitim İçeriği
+#### Teknolojiler
 
-1. Giriş
+- C# ASP.NET Core MVC
+- Bootstrap (Frontend tasarımı)
+- JavaScript (Temel interaktivite için)
+- SQL Server (Veritabanı yönetimi)
 
-   - Projelerin Önizlemesi
+#### Ekran Görüntüleri
 
-2. Temeller
+![BTkAkademi](ReadmeImages/1.png)
+![BTkAkademi](ReadmeImages/2.png)
+![BTkAkademi](ReadmeImages/3.png)
+![BTkAkademi](ReadmeImages/4.png)
 
-   - HTTP Protokolü
-   - Modern .NET Stack
-   - dotnet komut Seti
-   - MVC Proje Şablonu
-   - Endpoint Yapısını Anlamak
-   - HTML Rendering Konusu Anlamak
+### StoreApp
 
-3. MVC'ye Genel Bakış
-   - Proje Oluşturma ve Model Tanımı
-   - Controller ve View Öğelerinin Oluşturulması
-   - Model Binding
-   - Tag Helpers
-   - Repository (Inmemory)
-   - Receiving Data
-   - Model Validation
-4. Data-Driven Development
+StoreApp, kullanıcıların çeşitli ürünleri inceleyebileceği, arama yapabileceği, sepete ekleyebileceği ve satın alabileceği katmanlı bir e-ticaret platformudur. Kullanıcılar, ürün siparişi vermek istediklerinde login işlemlerini gerçekleştirirler. Ayrıca, ürün yönetimi ve sipariş takibi için yöneticilere özel bir admin paneli bulunmaktadır.
 
-   - Projenin Oluşturulması
-   - MVC Şablonunun Uygulanması
-   - SQLite Kurulumu
-   - Paket Yönetimi ve Repository Tanımı
-   - Bağlantı Dizesi
-   - Migrations
-   - Dependency Injection
-   - Inversion of Control
+#### Özellikler
 
-5. Layout
+- Kullanıcı tarafından ürün arama ve listeleme
+- Sepete ürün ekleme ve sepet yönetimi
+- Kullanıcı girişi ve kayıt olma işlemleri
+- Admin paneli üzerinden ürün yönetimi ve sipariş takibi
 
-   - Layout
-   - Partial View
-   - libman
-   - Bootstrap
-   - Grids
+#### Teknolojiler
 
-6. Repository Pattern
+- C# ASP.NET Core MVC
+- Bootstrap (Frontend tasarımı)
+- JavaScript (Dinamik kullanıcı arayüzü interaksiyonları için)
+- SQL Server (Veritabanı yönetimi)
 
-   - Entites Project
-   - Repositories Project
-   - IRepositoryBase & RepositoryBase
-   - IProductRepository & ProductRepository
-   - IRepositoryManager & RepositoryManager
-   - Category varlığının tanımlanması
+#### Ekran Görüntüleri
 
-7. Services
+![StoreApp](ReadmeImages/5.png)
+![StoreApp](ReadmeImages/6.png)
+![StoreApp](ReadmeImages/7.png)
+![StoreApp](ReadmeImages/8.png)
+![StoreApp](ReadmeImages/9.png)
+![StoreApp](ReadmeImages/10.png)
+![StoreApp](ReadmeImages/11.png)
+![StoreApp](ReadmeImages/12.png)
+![StoreApp](ReadmeImages/13.png)
+![StoreApp](ReadmeImages/14.png)
+![StoreApp](ReadmeImages/15.png)
+![StoreApp](ReadmeImages/16.png)
+![StoreApp](ReadmeImages/17.png)
+![StoreApp](ReadmeImages/18.png)
+![StoreApp](ReadmeImages/19.png)
 
-   - Services Project
-   - IProductService & ProductManager
-   - ICategory Service & CategoryManager
-   - IServiceManager & ServiceManager
-   - Configuration
+## Başlangıç
 
-8. ViewComponent
+Her iki projeyi de yerel olarak kurmak ve çalıştırmak için aşağıdaki adımları izleyiniz.
 
-   - ViewComponent
-   - ProductSummaryViewComponent
-   - CategoriesMenuViewComponent
+### Önkoşullar
 
-9. Areas
+Projeleri çalıştırmadan önce .NET Core SDK ve SQL Server'ın kurulu olması gerekmektedir.
 
-   - Admin Area ve Yapılandırılması
-   - Admin Panelin Düzenlenmesi
-   - Navbar
-   - ProductController in Admin Area
-     - Create
-     - Retrieve
-     - Update
-     - Delete
+### Kurulum
 
-10. AutoMapper
+#### BTkAkademi
 
-    - AutoMapper
-    - Product ve Category İlişkisinin Kurulması
-    - ProductDto tanımı
-    - AutoMapper
-    - AutoMapper ile Product nesnesinin Güncellenmesi
+```bash
+git clone https://github.com/cetinyazici/ASP.NET-Core-MVC
+cd BTkAkademi
+dotnet restore
+dotnet run
+```
 
-11. Dosyalama İşlemleri
+#### StoreApp
 
-    - IFormFile ve Form Düzenlemesi
-    - İmgeler ile Çalışma
-    - Sayfa Tasarımının Düzenlenmesi
+```bash
+git clone https://github.com/cetinyazici/ASP.NET-Core-MVC
+cd StoreApp
+dotnet restore
+dotnet run
+```
 
-12. Razor Pages
+### Katkıda Bulunma
 
-    - MVVM Deseni
-    - Yapılandırma
-    - Page Model
-    - Cart Service Tanımı
-    - Layout Özellikleri
+Projelere katkıda bulunmak isteyenler, ilgili repository'yi forkladıktan sonra pull request gönderebilirler. Katkıda bulunmak isteyenler için rehber:
 
-13. Session Management
+```bash
+git checkout -b ozellik/YeniOzellik
+git commit -am 'Yeni özellik eklendi'
+git push origin ozellik/YeniOzellik
+```
 
-    - Session
-    - Session Extension
-    - Session Extension Kullanımı
-    - Session Cart
-    - CartSummary Widget
-    - HttpRequest Extension
-    - Orders
-    - Complete Orders
-    - Manager Orders
+### İletişim
 
-14. Extensions
-
-    - Service Extension
-    - Auto Migratie
-    - Showcase
-    - Localization
-    - Routing
-    - FilteredByCategoryId Extension Method
-    - FilteredBySearchTerm Extension Method
-    - FilteredByPrice Extension Method
-
-15. Tag Helpers
-
-    - TagHelper
-    - TagBuilder
-    - HtmlAttributeName
-    - ViewContext
-    - Pagination
-    - PageLinkTagHelper
-
-16. Identity
-
-    - Identity
-    - Default Admin User
-    - Login
-    - Login Menu
-    - Registration
-    - AuthService
-    - CreateUser
-    - Update User
-    - Reset Password
-    - Delete User
-    - Authorize (Preserving endpoints)
-    - Application Cookie
-    - UserRole Tag Helper
-
-17. API
-
-    - Web API
-    - Configuration
-    - Presentation Layer
-
-18. Admin Panel
-    - Login Menu
-    - Tooltip
-    - Dashboard
-    - Showcase
-    - Notification
-    - ViewData
-    - MSSQL Yapılandırması
-
-## Kazanımlar
-
-- .NET Core çerçevesini öğrenildi.
-- MVC yazılım mimari modelini öğrenildi.
-- MVVM deseni öğrenildi
-- Dinamik web uygulamaları tasarlandı ve kodlandı.
+- E-posta: cetin.yazici2525@gmail.com
+- LinkedIn: [cetinyazici](https://www.linkedin.com/in/cetinyazici)
+- GitHub: [cetinyazici](https://github.com/cetinyazici)
