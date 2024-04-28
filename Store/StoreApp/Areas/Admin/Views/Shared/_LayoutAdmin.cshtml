@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Store App</title>
-    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/css/site.css" rel="stylesheet" />
-    <link href="~/lib/font-awesome/css/all.css" rel="stylesheet" />
+    <title>Btk Akademi - @ViewData["Title"]</title>
+    <link asp-append-version="true" href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link asp-append-version="true" href="~/css/site.css" rel="stylesheet" />
+    <link asp-append-version="true" href="~/lib/font-awesome/css/all.css" rel="stylesheet" />
 </head>
 <body>
     <header>
         <partial name="_Navbar">
     </header>
     <div class="container">
+        <div>
+            <partial name="_Notification"></partial>
+        </div>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

@@ -28,15 +28,17 @@ namespace StoreApp.Controllers
                 ItemsPerPage = p.PageSize,
                 TotalItems = _manager.ProductService.GetAllProducts(false).Count()
             };
-            return View(new ProductListViewModel(){
-                 Products = products,
-                 Pagination = pagination
+            return View(new ProductListViewModel()
+            {
+                Products = products,
+                Pagination = pagination
             });
         }
 
         public IActionResult Get([FromRoute(Name = "id")] int id)
         {
             var model = _manager.ProductService.GetOneProduct(id, false);
+            ViewData["Title"] = model?.ProductName;
             return View(model);
         }
     }
